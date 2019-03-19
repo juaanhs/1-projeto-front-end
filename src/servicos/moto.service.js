@@ -12,6 +12,10 @@ class MotoService {
     getMotos() {
         return this.$http.get(this.path);
     }
+
+    deletarMotos(id){
+        this.$http.delete(this.path+'/'+id);
+    }
 }
 
 export default angular.module('services.moto-service', [])
