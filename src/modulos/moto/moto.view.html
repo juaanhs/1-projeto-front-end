@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <h1>Consulta de  {{vm.name}}</h1>
+
+  <div class="row">
+    
+    <table class="table table-hover table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Moto</th>
+          <th scope="col">Capacete</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat='moto in vm.motos'>
+            <td><b>{{$index+1}}</b></td>
+            <td>{{moto.nome}}</td>
+            <td>{{moto.capacetes.length}}</td>
+            <td><button ng-click="delete($moto)">Delete</button></td>
+      </tbody>
+    </table>
+    
+  </div>
+
+</div>
